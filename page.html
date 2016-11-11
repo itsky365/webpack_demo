@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>hello</title>
+</head>
+
+<body>
+    <p>你好呀</p>
+
+    <div id="app">
+        {{ message }}
+
+        <p>{{ message2 }}</p>
+        <input v-model="message2">
+
+        <my-component></my-component>
+
+        <button type="button" v-on:click="getName">getName</button>
+        <button type="button" v-on:click="setName">getName</button>
+
+        <hr>
+        <hello title="hello"></hello>
+        <hr>
+    </div>
+
+    <div id="app2">
+        <h1>Hello App!</h1>
+        <p>
+            <!-- 使用 router-link 组件来导航. -->
+            <!-- 通过传入 `to` 属性指定链接. -->
+            <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+            <router-link to="/foo">Go to Foo</router-link>
+            <router-link to="/bar">Go to Bar</router-link>
+            <router-link to="/user/evan?a=aa&b=bb">Go to User</router-link>
+        </p>
+        <!-- 路由出口 -->
+        <!-- 路由匹配到的组件将渲染在这里 -->
+        <transition name="fade">
+            <router-view></router-view>
+        </transition>
+    </div>
+
+
+
+    <script src="./dist/bundle.js"></script>
+</body>
+
+</html>
