@@ -1,12 +1,11 @@
 var path = require('path');
-var webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.js',
 
     output: {
-        filename: "all.js",
-        path: './dst'
+        filename: "bundle.js",
+        path: './dist'
     },
 
     module: {
@@ -19,9 +18,6 @@ module.exports = {
             query: {
                 presets: ['es2015']
             }
-        }, {
-            test: /\.css$/,
-            loader: 'style!css'
         }]
     },
 
@@ -40,7 +36,4 @@ module.exports = {
     resolveLoader: {
         fallback: [path.join(__dirname, './node_modules')]
     },
-    plugins: [
-        new webpack.BannerPlugin('This file is created by zhaoda')
-    ]
 }

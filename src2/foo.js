@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     bar: function() {
         console.log('this is a foo.js');
         console.log('this is a foo.js');
